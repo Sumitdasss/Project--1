@@ -1,13 +1,13 @@
 
 import './App.css'
-import Cart from './cart'
+import Cartsection from './Cartsection'
 
 function App() {
  
 
   return (
     <>
-      <Cart/>
+      <Cartsection/>
     </>
   )
 }
