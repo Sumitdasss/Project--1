@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { HiBars3BottomLeft } from 'react-icons/hi2'
 import Navbar from './pages/Navbar'
 import { FaCaretDown, FaSearch, FaShoppingCart, FaUser } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import { CartContext } from '../Feturch/CartProvider'
 
 const Heading = () => {
+   const {cart}=useContext(CartContext)
   return (
    <>
      <Navbar/>
@@ -40,7 +42,7 @@ const Heading = () => {
   <Link to="/cart" className="relative cursor-pointer">
     <FaShoppingCart className="text-[25px]" />
     <span className='absolute rounded-full flex justify-center items-center -top-[10px] -right-[15px] w-[20px] h-[20px] font-medium text-white bg-[#222222]'>
-      0
+      {cart.length}
     </span>
   </Link>
 </div>
