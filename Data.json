@@ -73,5 +73,158 @@
         "price":9.99,
         "discountPercentage":"10.48"
        } 
+    ],
+    "Product2":[
+
+       {
+        "id":9,
+        "title":"Bottol",
+       "images":["/Image (9).png"],
+      "quantity":1,
+        "price":4,
+        "color":"White",
+        "discountPercentage":"5"
+       } ,
+       {
+        "id":10,
+        "title":"Bag",
+       "images":["/Image (10).png"],
+      "quantity":1,
+       "color":"White",
+        "price":8.00,
+        "discountPercentage":"10.48"
+       } ,
+       {
+        "id":11,
+        "title":"Bowl",
+       "images":["/Image (11).png"],
+      "quantity":1,
+       "color":"White",
+        "price":7.00,
+        "discountPercentage":"10.48"
+       } ,
+       {
+        "id":12,
+        "title":"Bag2",
+       "images":["/Image (12).png"],
+      "quantity":1,
+       "color":"Black",
+        "price":9.99,
+        "discountPercentage":"10.48"
+       } ,
+       {
+        "id":13,
+        "title":"Bottol",
+       "images":["/Image (9).png"],
+      "quantity":1,
+        "price":4,
+        "color":"White",
+        "discountPercentage":"5"
+       } ,
+       {
+        "id":14,
+        "title":"Bag",
+       "images":["/Image (10).png"],
+      "quantity":1,
+       "color":"White",
+        "price":8.00,
+        "discountPercentage":"10.48"
+       } ,
+       {
+        "id":15,
+        "title":"Bowl",
+       "images":["/Image (11).png"],
+      "quantity":1,
+       "color":"White",
+        "price":7.00,
+        "discountPercentage":"10.48"
+       } ,
+       {
+        "id":16,
+        "title":"Bag2",
+       "images":["/Image (12).png"],
+      "quantity":1,
+       "color":"Black",
+        "price":9.99,
+        "discountPercentage":"10.48"
+       } 
+       
+    ],
+    "Product3":[
+
+       {
+        "id":17,
+        "title":"Cap",
+       "images":["/Image (13).png"],
+      "quantity":1,
+        "price":9.99,
+        "color":"White",
+        "discountPercentage":"10.48"
+       } ,
+       {
+        "id":18,
+        "title":"Table",
+       "images":["/Image (14).png"],
+      "quantity":1,
+       "color":"Brown",
+        "price":9.99,
+        "discountPercentage":"10.48"
+       } ,
+       {
+        "id":19,
+        "title":"Headphone",
+       "images":["/Image (15).png"],
+      "quantity":1,
+       "color":"Pink",
+        "price":9.99,
+        "discountPercentage":"10.48"
+       } ,
+       {
+        "id":20,
+        "title":"Sunglass",
+       "images":["/Image (16).png"],
+      "quantity":1,
+       "color":"Black",
+        "price":9.99,
+        "discountPercentage":"10.48"
+       } ,
+
+       {
+        "id":21,
+        "title":"Cap",
+       "images":["/Image (13).png"],
+      "quantity":1,
+        "price":9.99,
+        "color":"White",
+        "discountPercentage":"10.48"
+       } ,
+       {
+        "id":22,
+        "title":"Table",
+       "images":["/Image (14).png"],
+      "quantity":1,
+       "color":"Brown",
+        "price":9.99,
+        "discountPercentage":"10.48"
+       } ,
+       {
+        "id":23,
+        "title":"Headphone",
+       "images":["/Image (15).png"],
+      "quantity":1,
+       "color":"Pink",
+        "price":9.99,
+        "discountPercentage":"10.48"
+       } ,
+       {
+        "id":24,
+        "title":"Sunglass",
+       "images":["/Image (16).png"],
+      "quantity":1,
+       "color":"Black",
+        "price":9.99,
+        "discountPercentage":"10.48"
+       } 
+       
     ]
 }

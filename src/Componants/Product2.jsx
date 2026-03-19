@@ -1,19 +1,15 @@
-
+import React from 'react'
 import { useState } from "react";
 import Data from "../../Data.json"
 import Producetwo from "./Producetwo";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import Productfour from './Productfour';
 
-import Product1 from "./Product1";
-import Product2 from "./Product2";
 const SlickSlider = Slider.default ? Slider.default : Slider;
-
-const Produtc = () => {
-
-
-   const [dotActive, setDotActive] = useState(0);
+const Product2 = () => {
+    const [dotActive, setDotActive] = useState(0);
   const settings = {
     dots: true,
     infinite: true,
@@ -58,22 +54,18 @@ beforeChange: (prev, next) => {
   ),
 
   }; 
-     const [Product ]=useState(Data.Product);
+     const [Product3 ]=useState(Data.Product3);
   return (
-    <>
-    <div className="max-w-[1440px] mx-auto mt-[50px]">
+     <div className="max-w-[1440px] mx-auto mt-[50px]">
     <div className=' justify-between'>
       <SlickSlider {...settings}>{
-        Product.map(p=>(
-         <Producetwo key={p.id}  Product={p} />
+        Product3.map(p=>(
+         <Productfour key={p.id}  Product3={p} />
         ))
     }
     </SlickSlider></div>
     </div>
-   <Product1/>
-   <Product2/>
-    </>
   )
 }
 
-export default Produtc
+export default Product2
