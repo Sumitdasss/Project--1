@@ -12,18 +12,18 @@ const Navbar = () => {
                 </div>
                 <div className="w-[60%] ">
                     <ul className='flex gap-x-10 duration-300'>
-<li className="font-medium text-[18px] text-[#767676] hover:text-[#222222] hover:font-bold cursor-pointer transition-all duration-700 ease-in-out">
+<Link to="/" className="font-medium text-[18px] text-[#767676] hover:text-[#222222] hover:font-bold cursor-pointer transition-all duration-700 ease-in-out">
   Home
-</li>
+</Link>
 <li className="font-medium text-[18px] text-[#767676] hover:text-[#222222] hover:font-bold cursor-pointer transition-all duration-700 ease-in-out">
   About
 </li>
 <li className="font-medium text-[18px] text-[#767676] hover:text-[#222222] hover:font-bold cursor-pointer transition-all duration-700 ease-in-out">
   Contact
 </li>
-<Link to="/"  className="font-medium text-[18px] text-[#767676] hover:text-[#222222] hover:font-bold cursor-pointer transition-all duration-700 ease-in-out">
+<li   className="font-medium text-[18px] text-[#767676] hover:text-[#222222] hover:font-bold cursor-pointer transition-all duration-700 ease-in-out">
   Shop
-</Link>
+</li>
                  
 
                         
