@@ -36,6 +36,42 @@
        "color":"Gray",
         "price":9.99,
         "discountPercentage":"10.48"
+       } ,
+       {
+        "id":5,
+        "title":"Clock",
+       "images":["/Image (5).png"],
+      "quantity":1,
+        "price":9.99,
+        "color":"Black",
+        "discountPercentage":"10.48"
+       } ,
+       {
+        "id":6,
+        "title":"Digital Wacth",
+       "images":["/Image (6).png"],
+      "quantity":1,
+       "color":"Black",
+        "price":9.99,
+        "discountPercentage":"10.48"
+       } ,
+       {
+        "id":7,
+        "title":"Basket",
+       "images":["/Image (7).png"],
+      "quantity":1,
+       "color":"Brown",
+        "price":9.99,
+        "discountPercentage":"10.48"
+       } ,
+       {
+        "id":8,
+        "title":"Toy",
+       "images":["/Image (8).png"],
+      "quantity":1,
+       "color":"Gray",
+        "price":9.99,
+        "discountPercentage":"10.48"
        } 
     ]
 }
