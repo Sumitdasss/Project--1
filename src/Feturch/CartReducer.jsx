@@ -14,7 +14,7 @@ const CartReducer = (state, action) => {
   switch (action.type) {
     case "Add":
      
-      { const itemToAdd = action.Product || action.Product2 || action.Product3;
+      { const itemToAdd = action.Product || action.Product2 || action.Product3 || action.item;
 
       
       const existingProduct = state.find((p) => p.id === itemToAdd.id);

@@ -28,8 +28,8 @@ beforeChange: (prev, next) => {
     <div
       style={{
         position: "absolute",
-        top: "60%",
-        left: "330px", 
+        top: "55%",
+        left: "250px", 
         transform: "translateY(-50%)",
         width: "30px",
         zIndex: "10" 

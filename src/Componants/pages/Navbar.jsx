@@ -21,9 +21,9 @@ const Navbar = () => {
 <li className="font-medium text-[18px] text-[#767676] hover:text-[#222222] hover:font-bold cursor-pointer transition-all duration-700 ease-in-out">
   Contact
 </li>
-<li   className="font-medium text-[18px] text-[#767676] hover:text-[#222222] hover:font-bold cursor-pointer transition-all duration-700 ease-in-out">
+<Link to="/shop"  className="font-medium text-[18px] text-[#767676] hover:text-[#222222] hover:font-bold cursor-pointer transition-all duration-700 ease-in-out">
   Shop
-</li>
+</Link>
                  
 
                         
