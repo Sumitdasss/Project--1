@@ -5,7 +5,7 @@ export const totalItem = (cart) => {
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const totaPrice = (cart) => {
-  // Product.Price এর বদলে Product.price হবে
+
   return cart.reduce((total, product) => total + product.quantity * product.price, 0);
 };
 

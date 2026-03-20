@@ -7,23 +7,22 @@ import Price from "../Slidebar/Price/Price";
 
 const Productshow = () => {
   const [products] = useState(Data2); 
-  // Filtering er jonno notun state
+  
   const [filteredProducts, setFilteredProducts] = useState(Data2); 
   const [currentPage, setCurrentPage] = useState(1); 
   const itemsPerPage = 12; 
 
-  // Filter Function
   const handleFilter = (filterValue, type) => {
     let updatedList = products;
 
     if (type === "category") {
-      // p.color-er poriborte p.category hobe
+      
       updatedList = products.filter((p) => p.category === filterValue); 
     } else if (type === "brand") {
-      // p.title-er poriborte p.brand hobe
+      
       updatedList = products.filter((p) => p.brand === filterValue);
     } else if (type === "price") {
-      // filterValue hisebe [min, max] array ashte hobe
+    
       const min = filterValue[0];
       const max = filterValue[1];
       updatedList = products.filter((p) => p.price >= min && p.price <= max);
@@ -48,7 +47,7 @@ const Productshow = () => {
     <div className="max-w-[1440px] mx-auto mt-[50px] px-4">
       <div className="flex flex-col md:flex-row gap-10 ">
         <div className="w-full md:w-[250px] shrink-0">
-          {/* Function gulo prop hisebe pass kora hoyeche */}
+        
           <Catigori item={products} onFilter={handleFilter} />
           <Recomanded item={products} onFilter={handleFilter} /> 
           <Price onFilter={handleFilter} />
@@ -70,7 +69,7 @@ const Productshow = () => {
         </div>
       </div>
 
-      {/* Pagination Controls */}
+    
       <div className="flex gap-2 mt-7 justify-center">
         {pages.map((page) => (
           <button
