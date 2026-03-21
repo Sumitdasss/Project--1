@@ -4,6 +4,7 @@ import Productitem from "./Productitem";
 import Recomanded from "../Rocommanded/Recomanded";
 import Catigori from "../Slidebar/Catygori/Catigori";
 import Price from "../Slidebar/Price/Price";
+import Color from "../Slidebar/Color/Color";
 
 const Productshow = () => {
   const [products] = useState(Data2); 
@@ -13,24 +14,28 @@ const Productshow = () => {
   const itemsPerPage = 12; 
 
   const handleFilter = (filterValue, type) => {
-    let updatedList = products;
+  let updatedList = products;
 
-    if (type === "category") {
-      
-      updatedList = products.filter((p) => p.category === filterValue); 
-    } else if (type === "brand") {
-      
-      updatedList = products.filter((p) => p.brand === filterValue);
-    } else if (type === "price") {
+  if (type === "category") {
+    updatedList = products.filter((p) => p.category === filterValue);
+  } 
+  else if (type === "brand") {
+    updatedList = products.filter((p) => p.brand === filterValue);
+  } 
+  else if (type === "price") {
+  
+    const min = filterValue[0];
+    const max = filterValue[1];
+    updatedList = products.filter((p) => p.price >= min && p.price <= max);
+  } 
+  else if (type === "color") {
     
-      const min = filterValue[0];
-      const max = filterValue[1];
-      updatedList = products.filter((p) => p.price >= min && p.price <= max);
-    }
+    updatedList = products.filter((p) => p.color === filterValue);
+  }
 
-    setFilteredProducts(updatedList);
-    setCurrentPage(1);
-  };
+  setFilteredProducts(updatedList);
+  setCurrentPage(1);
+};
 
   // Pagination logic ekhon filteredProducts upore kaj korbe
   const lastItemIndex = currentPage * itemsPerPage;
@@ -49,7 +54,8 @@ const Productshow = () => {
         <div className="w-full md:w-[250px] shrink-0">
         
           <Catigori item={products} onFilter={handleFilter} />
-          <Recomanded item={products} onFilter={handleFilter} /> 
+          <Recomanded item={products} onFilter={handleFilter} />
+          <Color item={products} onFilter={handleFilter}/>
           <Price onFilter={handleFilter} />
           
           <button 

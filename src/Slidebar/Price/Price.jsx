@@ -11,7 +11,7 @@ const Price = ({onFilter}) => {
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center justify-between cursor-pointer py-4"
       >
-        <h3 className="text-[20px] font-bold text-[#262626]">Shop by Category</h3>
+        <h3 className="text-[20px] font-bold text-[#262626]">Shop by Price</h3>
         <FaCaretUp className={`transition-transform duration-300 ${!isOpen ? "rotate-180" : ""}`} />
       </div>
 
