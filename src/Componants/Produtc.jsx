@@ -9,6 +9,8 @@ import Slider from "react-slick";
 import Product1 from "./Product1";
 import Product2 from "./Product2";
 import Banner from "./Banner";
+import Bannertwo from "./Bannertwo";
+
 
 
 
@@ -68,6 +70,7 @@ beforeChange: (prev, next) => {
    
     
     <Banner/>
+    <Bannertwo/>
     <div className="max-w-[1440px] mx-auto mt-[50px]">
     <div className=' justify-between'>
       <SlickSlider {...settings}>{
