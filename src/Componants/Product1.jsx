@@ -56,6 +56,7 @@ beforeChange: (prev, next) => {
      const [Product2 ]=useState(Data.Product2);
   return (
      <div className="max-w-[1440px] mx-auto mt-[50px]">
+      <p className="text-[40px] font-bold text-[#262626] pb-7">Our Bestsellers</p>
     <div className=' justify-between'>
       <SlickSlider {...settings}>{
         Product2.map(p=>(

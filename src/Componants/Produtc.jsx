@@ -10,6 +10,7 @@ import Product1 from "./Product1";
 import Product2 from "./Product2";
 import Banner from "./Banner";
 import Bannertwo from "./Bannertwo";
+import Bannerthree from "./Bannerthree";
 
 
 
@@ -72,6 +73,7 @@ beforeChange: (prev, next) => {
     <Banner/>
     <Bannertwo/>
     <div className="max-w-[1440px] mx-auto mt-[50px]">
+      <p className="text-[40px] font-bold text-[#262626] pb-7">New Arrivals</p>
     <div className=' justify-between'>
       <SlickSlider {...settings}>{
         Product.map(p=>(
@@ -81,6 +83,7 @@ beforeChange: (prev, next) => {
     </SlickSlider></div>
     </div>
    <Product1/>
+   <Bannerthree/>
    <Product2/>
     </>
   )
