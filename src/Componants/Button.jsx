@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { Children } from 'react'
 
-const Button = () => {
+const Button = ({text, className}) => {
   return (
-    <div>Button</div>
+    <div className={`${className}`}>{text}</div>
   )
 }
 
