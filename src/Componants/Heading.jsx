@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { HiBars3BottomLeft } from 'react-icons/hi2'
 import Navbar from './pages/Navbar'
 import { FaCaretDown, FaCaretUp, FaSearch, FaShoppingCart, FaUser } from 'react-icons/fa'
@@ -7,6 +7,7 @@ import { CartContext } from '../Feturch/CartProvider'
 
 const Heading = () => {
    const {cart}=useContext(CartContext)
+   const [isOpen, setIsOpen] = useState(false);
    
   return (
    <>
@@ -35,25 +36,37 @@ const Heading = () => {
         </div>
 
        <div className="flex items-center gap-8 text-[#262626]">
-  <div className={`relative flex items-center gap-1 cursor-pointer`}>
+ <div className="relative">
+ 
+  <div 
+    className="flex items-center gap-1 cursor-pointer" 
+    onClick={() => setIsOpen(!isOpen)}
+  >
     <FaUser className="text-[20px]" />
-    <FaCaretUp className="text-[20px]"/>
-<div className="absolute top-6 left-0 mt-2 w-25 bg-amber-600 border border-gray-200 rounded-lg shadow-lg   transition-all duration-300 z-50">
-        <ul className="py-2 text-gray-700">
-          <li className="px-4 py-2 hover:bg-amber-500 hover:text-white transition-colors">
-            Profile
-          </li>
-          <li className="px-4 py-2 hover:bg-amber-500 hover:text-white transition-colors">
-            Orders
-          </li>
-          <li className="px-4 py-2 hover:bg-amber-500 hover:text-white transition-colors border-t">
-            Logout
-          </li>
-        </ul>
-      </div>
-
-
+    <FaCaretDown className={`text-[20px] duration-500 ${!isOpen ? "rotate-180" : ""}`} />
   </div>
+
+  
+  <div className={`absolute left-0 z-40 top-6 mt-2 w-[150px] bg-white rounded-md overflow-hidden shadow-lg transition-all duration-500 ${isOpen ? "max-h-[220px]" : "max-h-0"}`}>
+    <ul className="flex flex-col text-gray-700">
+      <li className="px-4 py-2 hover:bg-[#C4C4C4] hover:text-white transition-colors cursor-pointer">
+        Profile
+      </li>
+      <li className="px-4 py-2 hover:bg-[#C4C4C4] hover:text-white transition-colors cursor-pointer">
+        Orders
+      </li>
+      <Link to="/login" className="px-4 py-2 hover:bg-[#C4C4C4] hover:text-white transition-colors cursor-pointer">
+        Login
+      </Link>
+      <Link to="/signup" className="px-4 py-2 hover:bg-[#C4C4C4] hover:text-white transition-colors cursor-pointer">
+        Sign Up
+      </Link>
+      <li className="px-4 py-2 hover:bg-[#C4C4C4] hover:text-white transition-colors border-t cursor-pointer">
+        Logout
+      </li>
+    </ul>
+  </div>
+</div>
  
   <Link to="/cart" className="relative cursor-pointer">
     <FaShoppingCart className="text-[25px]" />
