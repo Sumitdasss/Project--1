@@ -1,12 +1,13 @@
 import React, { useContext } from 'react'
 import { HiBars3BottomLeft } from 'react-icons/hi2'
 import Navbar from './pages/Navbar'
-import { FaCaretDown, FaSearch, FaShoppingCart, FaUser } from 'react-icons/fa'
+import { FaCaretDown, FaCaretUp, FaSearch, FaShoppingCart, FaUser } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../Feturch/CartProvider'
 
 const Heading = () => {
    const {cart}=useContext(CartContext)
+   
   return (
    <>
      <Navbar/>
@@ -34,9 +35,24 @@ const Heading = () => {
         </div>
 
        <div className="flex items-center gap-8 text-[#262626]">
-  <div className="flex items-center gap-1 cursor-pointer">
+  <div className={`relative flex items-center gap-1 cursor-pointer`}>
     <FaUser className="text-[20px]" />
-    <FaCaretDown className="text-[20px]"/>
+    <FaCaretUp className="text-[20px]"/>
+<div className="absolute top-6 left-0 mt-2 w-25 bg-amber-600 border border-gray-200 rounded-lg shadow-lg   transition-all duration-300 z-50">
+        <ul className="py-2 text-gray-700">
+          <li className="px-4 py-2 hover:bg-amber-500 hover:text-white transition-colors">
+            Profile
+          </li>
+          <li className="px-4 py-2 hover:bg-amber-500 hover:text-white transition-colors">
+            Orders
+          </li>
+          <li className="px-4 py-2 hover:bg-amber-500 hover:text-white transition-colors border-t">
+            Logout
+          </li>
+        </ul>
+      </div>
+
+
   </div>
  
   <Link to="/cart" className="relative cursor-pointer">
