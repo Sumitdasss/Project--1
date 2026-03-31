@@ -8,6 +8,7 @@ import { CartContext } from '../Feturch/CartProvider'
 const Heading = () => {
    const {cart}=useContext(CartContext)
    const [isOpen, setIsOpen] = useState(false);
+   const [isOpen2, setIsOpen2] = useState(false);
    
   return (
    <>
@@ -16,14 +17,40 @@ const Heading = () => {
       <div className="max-w-[1440px] mx-auto flex justify-between items-center">
         
       
-        <div className="flex items-center gap-2 cursor-pointer text-[#262626]">
-          <HiBars3BottomLeft className="text-2xl" />
-          <select name="" id="" className='w-full px-4 py-2 bg-white border border-gray-300 rounded-md appearance-none outline-none cursor-pointer'>
-            <option value="">Shop by Category</option>
-            <option value="">2</option>
-            <option value="">4</option>
-          </select>
-        </div>
+       <div className="relative">
+ 
+  <div 
+    className="flex items-center px-2 py-2 bg-white gap-1 cursor-pointer" 
+    onClick={() => setIsOpen2(!isOpen2)}
+  >
+    <HiBars3BottomLeft className="text-[20px]" />
+    <p className={`text-[17px] text-[#262626]  ${isOpen2 ? "" : ""} `}>Shop by Category</p>
+  </div>
+
+  
+  <div className={`absolute left-0 z-40 top-12 mt-2 w-[200px] bg-[#262626]  overflow-hidden shadow-lg transition-all duration-500 ${isOpen2 ? "max-h-[320px]" : "max-h-0"}`}>
+    <ul className="flex flex-col text-white/70">
+      <li className="px-6 py-4 border-b border-[#D8D8D8]/30 last:border-none hover:text-white hover:font-bold hover:pl-8 transition-all duration-300 cursor-pointer text-sm">
+        Accesories
+      </li>
+      <li className="px-6 py-4 border-b border-[#D8D8D8]/30 last:border-none hover:text-white hover:font-bold hover:pl-8 transition-all duration-300 cursor-pointer text-sm">
+       Furniture
+      </li>
+      <Link to="/login" className="px-6 py-4 border-b border-[#D8D8D8]/30 last:border-none hover:text-white hover:font-bold hover:pl-8 transition-all duration-300 cursor-pointer text-sm">
+        Electronics
+      </Link>
+      <Link to="/signup" className="px-6 py-4 border-b border-[#D8D8D8]/30 last:border-none hover:text-white hover:font-bold hover:pl-8 transition-all duration-300 cursor-pointer text-sm">
+       Clothes
+      </Link>
+      <li className="px-6 py-4 border-b border-[#D8D8D8]/30 last:border-none hover:text-white hover:font-bold hover:pl-8 transition-all duration-300 cursor-pointer text-sm">
+        Bags
+      </li>
+      <li className="px-6 py-4 border-b border-[#D8D8D8]/30 last:border-none hover:text-white hover:font-bold hover:pl-8 transition-all duration-300 cursor-pointer text-sm">
+        Home appliances
+      </li>
+    </ul>
+  </div>
+</div>
 
    
         <div className="relative w-[40%] md:w-[600px]">
