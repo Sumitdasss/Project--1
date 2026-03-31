@@ -1,13 +1,17 @@
 import React, { useState } from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import { FaPlus,FaMinus } from "react-icons/fa6";
 import Slider from "react-slick";
 import { Iconone } from './pages/Icons/Iconone';
 import Icontwo from './pages/Icons/Icontwo';
 import Iconthree from './pages/Icons/Iconthree';
 const SlickSlider = Slider.default ? Slider.default : Slider;
+
 const Banner = () => {
+
+
+
  const [dotActive, setDotActive] = useState(0);
   const settings = {
     dots: true,
@@ -81,7 +85,9 @@ beforeChange: (prev, next) => {
 
   <button className='px-7 py-3 bg-[#262626] text-white font-medium mt-4'>Shop Now</button>
   </div>
+ 
 </div>
+
 
     </div>
     <div className='bg-[url(/src/assets/Image.jpg)] bg-cover bg-no-repeat bg-center h-[600px]'>

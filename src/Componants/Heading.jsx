@@ -1,14 +1,23 @@
 import React, { useContext, useState } from 'react'
 import { HiBars3BottomLeft } from 'react-icons/hi2'
 import Navbar from './pages/Navbar'
-import { FaCaretDown, FaCaretUp, FaSearch, FaShoppingCart, FaUser } from 'react-icons/fa'
+import { FaCaretDown, FaCaretUp, FaMinus, FaPlus, FaSearch, FaShoppingCart, FaUser } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../Feturch/CartProvider'
 
 const Heading = () => {
+
    const {cart}=useContext(CartContext)
    const [isOpen, setIsOpen] = useState(false);
    const [isOpen2, setIsOpen2] = useState(false);
+   const [isOpen3, setIsOpen3] = useState(0);
+   const handleMinus = () => {
+     setIsOpen3(isOpen3-1 >= 0 ? isOpen3 - 1 : isOpen3);
+   };
+
+   const handlePlus = () => {
+     setIsOpen3(isOpen3 + 1 <= 20 ?isOpen3+1:isOpen3);
+   };
    
   return (
    <>
@@ -30,24 +39,24 @@ const Heading = () => {
   
   <div className={`absolute left-0 z-40 top-12 mt-2 w-[200px] bg-[#262626]  overflow-hidden shadow-lg transition-all duration-500 ${isOpen2 ? "max-h-[320px]" : "max-h-0"}`}>
     <ul className="flex flex-col text-white/70">
-      <li className="px-6 py-4 border-b border-[#D8D8D8]/30 last:border-none hover:text-white hover:font-bold hover:pl-8 transition-all duration-300 cursor-pointer text-sm">
+      <Link className="px-6 py-4 border-b border-[#D8D8D8]/30 last:border-none focus:text-white focus:font-bold focus:pl-8 transition-all duration-300 cursor-pointer text-sm">
         Accesories
-      </li>
-      <li className="px-6 py-4 border-b border-[#D8D8D8]/30 last:border-none hover:text-white hover:font-bold hover:pl-8 transition-all duration-300 cursor-pointer text-sm">
+      </Link>
+      <Link className="px-6 py-4 border-b border-[#D8D8D8]/30 last:border-none focus:text-white focus:font-bold focus:pl-8 transition-all duration-300 cursor-pointer text-sm">
        Furniture
-      </li>
-      <Link to="/login" className="px-6 py-4 border-b border-[#D8D8D8]/30 last:border-none hover:text-white hover:font-bold hover:pl-8 transition-all duration-300 cursor-pointer text-sm">
+      </Link>
+      <Link  className="px-6 py-4 border-b border-[#D8D8D8]/30 last:border-none focus:text-white focus:font-bold focus:pl-8 transition-all duration-300 cursor-pointer text-sm">
         Electronics
       </Link>
-      <Link to="/signup" className="px-6 py-4 border-b border-[#D8D8D8]/30 last:border-none hover:text-white hover:font-bold hover:pl-8 transition-all duration-300 cursor-pointer text-sm">
+      <Link  className="px-6 py-4 border-b border-[#D8D8D8]/30 last:border-none focus:text-white focus:font-bold focus:pl-8 transition-all duration-300 cursor-pointer text-sm">
        Clothes
       </Link>
-      <li className="px-6 py-4 border-b border-[#D8D8D8]/30 last:border-none hover:text-white hover:font-bold hover:pl-8 transition-all duration-300 cursor-pointer text-sm">
+      <Link className="px-6 py-4 border-b border-[#D8D8D8]/30 last:border-none focus:text-white focus:font-bold focus:pl-8 transition-all duration-300 cursor-pointer text-sm">
         Bags
-      </li>
-      <li className="px-6 py-4 border-b border-[#D8D8D8]/30 last:border-none hover:text-white hover:font-bold hover:pl-8 transition-all duration-300 cursor-pointer text-sm">
+      </Link>
+      <Link className="px-6 py-4 border-b border-[#D8D8D8]/30 last:border-none focus:text-white focus:font-bold focus:pl-8 transition-all duration-300 cursor-pointer text-sm">
         Home appliances
-      </li>
+      </Link>
     </ul>
   </div>
 </div>
@@ -74,23 +83,23 @@ const Heading = () => {
   </div>
 
   
-  <div className={`absolute left-0 z-40 top-6 mt-2 w-[150px] bg-white rounded-md overflow-hidden shadow-lg transition-all duration-500 ${isOpen ? "max-h-[220px]" : "max-h-0"}`}>
-    <ul className="flex flex-col text-gray-700">
-      <li className="px-4 py-2 hover:bg-[#C4C4C4] hover:text-white transition-colors cursor-pointer">
+  <div className={`absolute left-0 z-40 top-6 mt-2 w-[150px] bg-[#262626] rounded-md overflow-hidden shadow-lg transition-all duration-500 ${isOpen ? "max-h-[270px]" : "max-h-0"}`}>
+    <ul className="flex flex-col text-white/70">
+      <Link className="px-6 py-4 border-b border-[#D8D8D8]/30 last:border-none focus:text-white focus:font-bold focus:pl-8 transition-all duration-300 cursor-pointer text-sm">
         Profile
-      </li>
-      <li className="px-4 py-2 hover:bg-[#C4C4C4] hover:text-white transition-colors cursor-pointer">
+      </Link>
+      <Link className="px-6 py-4 border-b border-[#D8D8D8]/30 last:border-none focus:text-white focus:font-bold focus:pl-8 transition-all duration-300 cursor-pointer text-sm">
         Orders
-      </li>
-      <Link to="/login" className="px-4 py-2 hover:bg-[#C4C4C4] hover:text-white transition-colors cursor-pointer">
+      </Link>
+      <Link to="/login" className="px-6 py-4 border-b border-[#D8D8D8]/30 last:border-none focus:text-white focus:font-bold focus:pl-8 transition-all duration-300 cursor-pointer text-sm">
         Login
       </Link>
-      <Link to="/signup" className="px-4 py-2 hover:bg-[#C4C4C4] hover:text-white transition-colors cursor-pointer">
+      <Link to="/signup" className="px-6 py-4 border-b border-[#D8D8D8]/30 last:border-none focus:text-white focus:font-bold focus:pl-8 transition-all duration-300 cursor-pointer text-sm">
         Sign Up
       </Link>
-      <li className="px-4 py-2 hover:bg-[#C4C4C4] hover:text-white transition-colors border-t cursor-pointer">
+      <Link className="px-6 py-4 border-b border-[#D8D8D8]/30 last:border-none focus:text-white focus:font-bold focus:pl-8 transition-all duration-300 cursor-pointer text-sm">
         Logout
-      </li>
+      </Link>
     </ul>
   </div>
 </div>
@@ -101,6 +110,11 @@ const Heading = () => {
       {cart.length}
     </span>
   </Link>
+</div>
+ <div className="flex">
+  <button className=' cursor-pointer' onClick={handleMinus }><FaMinus /></button>
+  <p>{isOpen3}</p>
+  <button className=' cursor-pointer' onClick={handlePlus}><FaPlus /></button>
 </div>
 
       </div>
