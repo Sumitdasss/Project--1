@@ -51,7 +51,7 @@
         qrCode: "https://cdn.dummyjson.com/public/qr-code.png",
       },
       images: [
-        "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp",
+        "https://images.unsplash.com/photo-1592078615290-033ee584e267?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGZ1cm5pdHVyZXxlbnwwfHwwfHx8MA%3D%3D",
       ],
       thumbnail:
         "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp",

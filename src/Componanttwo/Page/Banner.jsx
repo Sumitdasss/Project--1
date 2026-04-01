@@ -7,7 +7,11 @@ import "slick-carousel/slick/slick-theme.css";
 import { Iconone } from '../../Componants/pages/Icons/Iconone';
 import Icontwo from '../../Componants/pages/Icons/Icontwo';
 import Iconthree from '../../Componants/pages/Icons/Iconthree';
-import Bannertwo from '../Bannertwo';
+import Bannertwo from './Bannertwo';
+
+import Productone from './Productone';
+
+
 const SlickSlider = Slider.default ? Slider.default : Slider;
 
 const Banner = () => {
@@ -195,6 +199,8 @@ Design Studio</p>
 </div>
 </div>
  <Bannertwo/>
+<Productone/>
+
         </div>
        
   )
