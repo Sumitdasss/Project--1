@@ -8,6 +8,7 @@ import Cart from './Componants/pages/Cart'
 import Productshow from './Products/Productshow'
 import Login from './Componants/Login'
 import Singup from './Componants/Singup'
+import Banner from './Componanttwo/Page/Banner'
 
 
 
@@ -25,6 +26,7 @@ function App() {
       <Route path='/shop' element={<Productshow></Productshow>}></Route>
       <Route path='/login' element={<Login></Login>}></Route>
       <Route path='/signup' element={<Singup></Singup>}></Route>
+      <Route path='/banner' element={<Banner></Banner>}></Route>
     
     </Routes>
 <Fttore/>

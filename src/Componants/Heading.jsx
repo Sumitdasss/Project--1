@@ -10,14 +10,7 @@ const Heading = () => {
    const {cart}=useContext(CartContext)
    const [isOpen, setIsOpen] = useState(false);
    const [isOpen2, setIsOpen2] = useState(false);
-   const [isOpen3, setIsOpen3] = useState(0);
-   const handleMinus = () => {
-     setIsOpen3(isOpen3-1 >= 0 ? isOpen3 - 1 : isOpen3);
-   };
-
-   const handlePlus = () => {
-     setIsOpen3(isOpen3 + 1 <= 20 ?isOpen3+1:isOpen3);
-   };
+   
    
   return (
    <>
@@ -33,7 +26,7 @@ const Heading = () => {
     onClick={() => setIsOpen2(!isOpen2)}
   >
     <HiBars3BottomLeft className="text-[20px]" />
-    <p className={`text-[17px] text-[#262626]  ${isOpen2 ? "" : ""} `}>Shop by Category</p>
+    <p className={`text-[17px] text-[#262626]   `}>Shop by Category</p>
   </div>
 
   
@@ -42,10 +35,10 @@ const Heading = () => {
       <Link className="px-6 py-4 border-b border-[#D8D8D8]/30 last:border-none focus:text-white focus:font-bold focus:pl-8 transition-all duration-300 cursor-pointer text-sm">
         Accesories
       </Link>
-      <Link className="px-6 py-4 border-b border-[#D8D8D8]/30 last:border-none focus:text-white focus:font-bold focus:pl-8 transition-all duration-300 cursor-pointer text-sm">
+      <Link to="/banner" className="px-6 py-4 border-b border-[#D8D8D8]/30 last:border-none focus:text-white focus:font-bold focus:pl-8 transition-all duration-300 cursor-pointer text-sm">
        Furniture
       </Link>
-      <Link  className="px-6 py-4 border-b border-[#D8D8D8]/30 last:border-none focus:text-white focus:font-bold focus:pl-8 transition-all duration-300 cursor-pointer text-sm">
+      <Link to="/"  className="px-6 py-4 border-b border-[#D8D8D8]/30 last:border-none focus:text-white focus:font-bold focus:pl-8 transition-all duration-300 cursor-pointer text-sm">
         Electronics
       </Link>
       <Link  className="px-6 py-4 border-b border-[#D8D8D8]/30 last:border-none focus:text-white focus:font-bold focus:pl-8 transition-all duration-300 cursor-pointer text-sm">
@@ -110,11 +103,6 @@ const Heading = () => {
       {cart.length}
     </span>
   </Link>
-</div>
- <div className="flex">
-  <button className=' cursor-pointer' onClick={handleMinus }><FaMinus /></button>
-  <p>{isOpen3}</p>
-  <button className=' cursor-pointer' onClick={handlePlus}><FaPlus /></button>
 </div>
 
       </div>
