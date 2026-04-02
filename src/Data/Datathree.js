@@ -52,7 +52,7 @@ export const Data4 = [
         qrCode: "https://cdn.dummyjson.com/public/qr-code.png",
       },
       images: [
-        "/photo-1550581190-9c1c48d21d6c.avif",
+        "/1.avif",
       ],
       thumbnail:
         "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp",
@@ -108,7 +108,7 @@ export const Data4 = [
         qrCode: "https://cdn.dummyjson.com/public/qr-code.png",
       },
       images: [
-        "/photo-1499933374294-4584851497cc.avif",
+        "/2.avif",
       ],
       thumbnail:
         "https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/thumbnail.webp",
@@ -164,7 +164,7 @@ export const Data4 = [
         qrCode: "https://cdn.dummyjson.com/public/qr-code.png",
       },
       images: [
-        "public/photo-1506898667547-42e22a46e125.avif",
+        "/3.avif",
       ],
       thumbnail:
         "https://cdn.dummyjson.com/product-images/beauty/powder-canister/thumbnail.webp",
@@ -220,7 +220,7 @@ export const Data4 = [
         qrCode: "https://cdn.dummyjson.com/public/qr-code.png",
       },
       images: [
-        "/photo-1519947486511-46149fa0a254.avif",
+        "/4.avif",
       ],
       thumbnail:
         "https://cdn.dummyjson.com/product-images/beauty/red-lipstick/thumbnail.webp",
@@ -276,7 +276,7 @@ export const Data4 = [
         qrCode: "https://cdn.dummyjson.com/public/qr-code.png",
       },
       images: [
-        "public/photo-1531904300735-5f40721f712f.avif",
+        "/5.avif",
       ],
       thumbnail:
         "https://cdn.dummyjson.com/product-images/beauty/red-nail-polish/thumbnail.webp",
@@ -332,7 +332,7 @@ export const Data4 = [
         qrCode: "https://cdn.dummyjson.com/public/qr-code.png",
       },
       images: [
-        "/photo-1539291973002-31d386fde4dc.avif",
+        "/6.avif",
        
         
       ],
@@ -390,7 +390,7 @@ export const Data4 = [
         qrCode: "https://cdn.dummyjson.com/public/qr-code.png",
       },
       images: [
-        "/photo-1573866926487-a1865558a9cf.avif"
+        "/7.avif"
       ],
       thumbnail:
         "https://cdn.dummyjson.com/product-images/fragrances/chanel-coco-noir-eau-de/thumbnail.webp",
@@ -446,7 +446,7 @@ export const Data4 = [
         qrCode: "https://cdn.dummyjson.com/public/qr-code.png",
       },
       images: [
-        "/photo-1586158291800-2665f07bba79.avif"
+        "/8.avif"
       ],
       thumbnail:
         "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/thumbnail.webp",
@@ -502,7 +502,7 @@ export const Data4 = [
         qrCode: "https://cdn.dummyjson.com/public/qr-code.png",
       },
       images: [
-       "/photo-1647967527216-adea2f078e07.avif"
+       "/9.avif"
       ],
       thumbnail:
         "https://cdn.dummyjson.com/product-images/fragrances/dolce-shine-eau-de/thumbnail.webp",
@@ -558,7 +558,7 @@ export const Data4 = [
         qrCode: "https://cdn.dummyjson.com/public/qr-code.png",
       },
       images: [
-        "/photo-1698770531036-c627d35188f2.avif"
+        "/10.avif"
       ],
       thumbnail:
         "https://cdn.dummyjson.com/product-images/fragrances/gucci-bloom-eau-de/thumbnail.webp",
@@ -614,7 +614,7 @@ export const Data4 = [
         qrCode: "https://cdn.dummyjson.com/public/qr-code.png",
       },
       images: [
-        "/photo-1712926382189-dacbc6b89a01.avif"
+        "/11.avif"
       ],
       thumbnail:
         "https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/thumbnail.webp",
@@ -670,7 +670,7 @@ export const Data4 = [
         qrCode: "https://cdn.dummyjson.com/public/qr-code.png",
       },
       images: [
-       "/photo-1718049719673-70ee6f6dfa28.avif"
+       "/12.avif"
       ],
       thumbnail:
         "https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/thumbnail.webp",
@@ -726,7 +726,7 @@ export const Data4 = [
         qrCode: "https://cdn.dummyjson.com/public/qr-code.png",
       },
       images: [
-       "/photo-1718049719688-764249c6800d.avif"
+       "/13.avif"
       ],
       thumbnail:
         "https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/thumbnail.webp",
@@ -782,7 +782,7 @@ export const Data4 = [
         qrCode: "https://cdn.dummyjson.com/public/qr-code.png",
       },
       images: [
-        "/premium_photo-1684445034959-b3faeb4597d2.avif"
+        "/14.avif"
       ],
       thumbnail:
         "https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/thumbnail.webp",
