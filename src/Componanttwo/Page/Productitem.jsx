@@ -9,12 +9,12 @@ const Productitem = ({product}) => {
      
       
   return (
-     <div className="max-w-[350px] group relative cursor-pointer shadow-2xl p-3 mb-10">
+     <div className="max-w-[350px] h-[500px] bg-[#262626]/25 group relative cursor-pointer  p-3 mb-10">
           <div className="relative overflow-hidden ">
         <img 
       src={product.images[0]} 
       alt={product.title}
-      className="w-full h-[370px] object-contain"
+      className="w-full h-[330px] object-contain"
     />
             
             <div className="absolute top-5 left-5 bg-[#262626] text-white text-[14px] font-bold px-8 py-2">

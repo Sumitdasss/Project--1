@@ -1,4 +1,4 @@
-export const Data3 = [
+export const Data4 = [
    
     {
       id: 1,
@@ -52,7 +52,7 @@ export const Data3 = [
         qrCode: "https://cdn.dummyjson.com/public/qr-code.png",
       },
       images: [
-        "/download.webp",
+        "/photo-1550581190-9c1c48d21d6c.avif",
       ],
       thumbnail:
         "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp",
@@ -108,7 +108,7 @@ export const Data3 = [
         qrCode: "https://cdn.dummyjson.com/public/qr-code.png",
       },
       images: [
-        "/download (1).webp",
+        "/photo-1499933374294-4584851497cc.avif",
       ],
       thumbnail:
         "https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/thumbnail.webp",
@@ -164,7 +164,7 @@ export const Data3 = [
         qrCode: "https://cdn.dummyjson.com/public/qr-code.png",
       },
       images: [
-        "/download (2).webp",
+        "public/photo-1506898667547-42e22a46e125.avif",
       ],
       thumbnail:
         "https://cdn.dummyjson.com/product-images/beauty/powder-canister/thumbnail.webp",
@@ -220,7 +220,7 @@ export const Data3 = [
         qrCode: "https://cdn.dummyjson.com/public/qr-code.png",
       },
       images: [
-        "/download (3).webp",
+        "/photo-1519947486511-46149fa0a254.avif",
       ],
       thumbnail:
         "https://cdn.dummyjson.com/product-images/beauty/red-lipstick/thumbnail.webp",
@@ -276,7 +276,7 @@ export const Data3 = [
         qrCode: "https://cdn.dummyjson.com/public/qr-code.png",
       },
       images: [
-        "/download (4).webp",
+        "public/photo-1531904300735-5f40721f712f.avif",
       ],
       thumbnail:
         "https://cdn.dummyjson.com/product-images/beauty/red-nail-polish/thumbnail.webp",
@@ -332,7 +332,7 @@ export const Data3 = [
         qrCode: "https://cdn.dummyjson.com/public/qr-code.png",
       },
       images: [
-        "/download (5).webp",
+        "/photo-1539291973002-31d386fde4dc.avif",
        
         
       ],
@@ -390,7 +390,7 @@ export const Data3 = [
         qrCode: "https://cdn.dummyjson.com/public/qr-code.png",
       },
       images: [
-        "/shopping (1).webp"
+        "/photo-1573866926487-a1865558a9cf.avif"
       ],
       thumbnail:
         "https://cdn.dummyjson.com/product-images/fragrances/chanel-coco-noir-eau-de/thumbnail.webp",
@@ -446,7 +446,7 @@ export const Data3 = [
         qrCode: "https://cdn.dummyjson.com/public/qr-code.png",
       },
       images: [
-        "/shopping (2).webp"
+        "/photo-1586158291800-2665f07bba79.avif"
       ],
       thumbnail:
         "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/thumbnail.webp",
@@ -502,7 +502,7 @@ export const Data3 = [
         qrCode: "https://cdn.dummyjson.com/public/qr-code.png",
       },
       images: [
-       "/shopping.webp"
+       "/photo-1647967527216-adea2f078e07.avif"
       ],
       thumbnail:
         "https://cdn.dummyjson.com/product-images/fragrances/dolce-shine-eau-de/thumbnail.webp",
@@ -558,7 +558,7 @@ export const Data3 = [
         qrCode: "https://cdn.dummyjson.com/public/qr-code.png",
       },
       images: [
-        "/shopping (3).webp"
+        "/photo-1698770531036-c627d35188f2.avif"
       ],
       thumbnail:
         "https://cdn.dummyjson.com/product-images/fragrances/gucci-bloom-eau-de/thumbnail.webp",
@@ -614,7 +614,7 @@ export const Data3 = [
         qrCode: "https://cdn.dummyjson.com/public/qr-code.png",
       },
       images: [
-        "/download (8).webp"
+        "/photo-1712926382189-dacbc6b89a01.avif"
       ],
       thumbnail:
         "https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/thumbnail.webp",
@@ -670,7 +670,7 @@ export const Data3 = [
         qrCode: "https://cdn.dummyjson.com/public/qr-code.png",
       },
       images: [
-       "/download (7).webp"
+       "/photo-1718049719673-70ee6f6dfa28.avif"
       ],
       thumbnail:
         "https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/thumbnail.webp",
@@ -726,7 +726,7 @@ export const Data3 = [
         qrCode: "https://cdn.dummyjson.com/public/qr-code.png",
       },
       images: [
-       "/download (6).webp"
+       "/photo-1718049719688-764249c6800d.avif"
       ],
       thumbnail:
         "https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/thumbnail.webp",
@@ -782,9 +782,7 @@ export const Data3 = [
         qrCode: "https://cdn.dummyjson.com/public/qr-code.png",
       },
       images: [
-        "https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/1.webp",
-        "https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/2.webp",
-        "https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/3.webp",
+        "/premium_photo-1684445034959-b3faeb4597d2.avif"
       ],
       thumbnail:
         "https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/thumbnail.webp",

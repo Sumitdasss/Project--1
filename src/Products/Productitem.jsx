@@ -8,7 +8,7 @@ const Productitem = ({item}) => {
     const {dispatch}=useContext(CartContext)
   if (!item) return null; 
   return (
-    <div className="max-w-[370px] bg-white h-[450px] group relative cursor-pointer mb-10 shadow-2xl">
+    <div className="max-w-[370px] bg-white h-[520px] group relative cursor-pointer mb-10 shadow-2xl">
           <div className="relative overflow-hidden ">
         <img 
       src={item.images[0]} 
@@ -48,9 +48,9 @@ const Productitem = ({item}) => {
             </div>
           </div>
           <p className="text-[16px] text-[#262626] pl-2 font-medium">Status: <span className="text-green-500">{item.availabilityStatus}</span>  : {item.stock} Itemleft</p>
-          <p className="text-[16px] text-[#767676] pl-2 font-medium">Rating:{item.rating}</p>
-          <p className="text-[16px] text-[#767676] pl-2 font-medium">Rating:{item.warrantyInformation}</p>
-          <p className="text-[16px] text-[#767676] pl-2 font-medium">Rating:{item.shippingInformation}</p>
+          <p className="text-[16px] text-[#767676] pl-2 font-medium">Rating:<span className="text-yellow-500"> {item.rating}</span></p>
+          <p className="text-[16px] text-[#767676] pl-2 font-medium">Warranty:<span className="text-blue-500"> {item.warrantyInformation}</span></p>
+          <p className="text-[16px] text-[#767676] pl-2 font-medium">Shipping:<span className="text-blue-500"> {item.shippingInformation}</span></p>
           </div>
         </div>
   )

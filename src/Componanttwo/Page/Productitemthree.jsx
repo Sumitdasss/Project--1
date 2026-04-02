@@ -1,17 +1,17 @@
+
 import React, { useContext } from 'react'
 import { CartContext } from '../../Feturch/CartProvider';
 import { FaHeart, FaShoppingCart } from 'react-icons/fa';
 import { TfiReload } from 'react-icons/tfi';
-
-const Productitemtwo = ({product}) => {
+export const Productitemthree = ({product11}) => {
      const {dispatch}=useContext(CartContext)
-         if (!product) return null;
+         if (!product11) return null;
   return (
-    <div className="max-w-[350px] h-[500px] group relative bg-[#262626]/25 cursor-pointer p-3  mb-10">
+    <div className="max-w-[350px] h-[500px] bg-[#262626]/25 group relative cursor-pointer  p-3 mb-10">
              <div className="relative overflow-hidden ">
            <img 
-         src={product.images[0]} 
-         alt={product.title}
+         src={product11.images[0]} 
+         alt={product11.title}
          className="w-full h-[330px] object-contain"
        />
                
@@ -27,7 +27,7 @@ const Productitemtwo = ({product}) => {
                    <li className="flex items-center justify-end gap-4 text-[#767676] hover:text-[#262626] hover:font-bold duration-300">
                      Compare <TfiReload className="text-black font-bold" />
                    </li>
-                   <button onClick={()=>dispatch({type:"Add", Product: product})}  className="flex items-center justify-end gap-4 text-[#262626] font-bold duration-300">
+                   <button onClick={()=>dispatch({type:"Add", Product: product11})}  className="flex items-center justify-end gap-4 text-[#262626] font-bold duration-300">
                      Add to Cart <FaShoppingCart className="text-black" />
                    </button>
                  </ul>
@@ -36,18 +36,16 @@ const Productitemtwo = ({product}) => {
        
              <div className="mt-6 flex justify-between items-start">
                <div>55
-                 <h3 className="text-[16px] font-bold text-[#262626]">{product.title}</h3>
-                 <p className="text-[#767676] text-[16px] mt-2">{product.rating}</p>
+                 <h3 className="text-[16px] font-bold text-[#262626]">{product11.title}</h3>
+                 <p className="text-[#767676] text-[16px] mt-2">{product11.rating}</p>
                </div>
                <div className="text-right">
-                 <p className="text-[16px] text-[#262626] font-bold">${product.price}</p>
+                 <p className="text-[16px] text-[#262626] font-bold">${product11.price}</p>
                  <p className="text-[#767676] text-[14px] line-through">
-                   {product.discountPercentage}% Off
+                   {product11.discountPercentage}% Off
                  </p>
                </div>
              </div>
            </div>
   )
 }
-
-export default Productitemtwo

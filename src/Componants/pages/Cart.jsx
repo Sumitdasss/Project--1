@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import CartProduct from "../CartProduct";
 import { totalItem, totaPrice } from "../../Feturch/CartReducer";
 import { CartContext } from "../../Feturch/CartProvider";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const { cart } = useContext(CartContext);
@@ -42,12 +43,12 @@ const Cart = () => {
                   <button className="px-7.5 py-4 bg-white border-3 font-semibold rounded-lg border-black/50 text-[#222222] uppercase">
                     Apply Coupon
                   </button>
-                  <button
+                  <Link to="/shop"
                     id="updateCart"
                     className="px-7.5 py-4 bg-red-500 font-semibold rounded-lg text-white uppercase ml-[205px]"
                   >
                     Update Cart
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -11,6 +11,9 @@ import Bannertwo from './Bannertwo';
 
 import Productone from './Productone';
 import Producttwo from './Producttwo';
+import { Link } from 'react-router-dom';
+import Bannrethree from './Bannrethree';
+import { Productthree } from './Productthree';
 
 
 const SlickSlider = Slider.default ? Slider.default : Slider;
@@ -74,7 +77,9 @@ appendDots: (dots) => (
     <p className='text-[54px] font-bold text-white leading-16 pt-[170px]'>Modern Interior <br></br>
 Design Studio</p>
 <div className="flex items-center gap-x-3 mt-10">
-<Button text={"Shop Now"} className={"py-3 px-5 text-[17px] font-medium text-[#262626]  bg-[#D6CE93] rounded-[50px] cursor-pointer inline-block"}/>
+<Link to="/shop" className={"py-3 px-5 text-[17px] font-medium text-[#262626]  bg-[#D6CE93] rounded-[50px] cursor-pointer inline-block"}>
+  Shop Now
+</Link>
 <Button text={"Explore"} className={"py-3 px-6 border-2 text-[17px] font-medium text-white  border-white/29 inline-block cursor-pointer rounded-[50px]"}/>
 </div>
 </div>
@@ -202,6 +207,8 @@ Design Studio</p>
  <Bannertwo/>
 <Productone/>
 <Producttwo/>
+<Bannrethree/>
+<Productthree/>
 
         </div>
        
