@@ -10,6 +10,7 @@ import Iconthree from '../../Componants/pages/Icons/Iconthree';
 import Bannertwo from './Bannertwo';
 
 import Productone from './Productone';
+import Producttwo from './Producttwo';
 
 
 const SlickSlider = Slider.default ? Slider.default : Slider;
@@ -200,6 +201,7 @@ Design Studio</p>
 </div>
  <Bannertwo/>
 <Productone/>
+<Producttwo/>
 
         </div>
        

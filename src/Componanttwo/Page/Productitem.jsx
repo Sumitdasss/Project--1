@@ -9,7 +9,7 @@ const Productitem = ({product}) => {
      
       
   return (
-     <div className="max-w-[350px] group relative cursor-pointer mb-10">
+     <div className="max-w-[350px] group relative cursor-pointer shadow-2xl p-3 mb-10">
           <div className="relative overflow-hidden ">
         <img 
       src={product.images[0]} 
@@ -38,7 +38,7 @@ const Productitem = ({product}) => {
     
           <div className="mt-6 flex justify-between items-start">
             <div>55
-              <h3 className="text-[20px] font-bold text-[#262626]">{product.title}</h3>
+              <h3 className="text-[16px] font-bold text-[#262626]">{product.title}</h3>
               <p className="text-[#767676] text-[16px] mt-2">{product.rating}</p>
             </div>
             <div className="text-right">
