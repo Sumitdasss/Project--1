@@ -11,7 +11,7 @@ import { CartContext } from '../Feturch/CartProvider'
 
 const Heading = () => {
 
-  const allProducts = useMemo(() => [...Data2, ...Data, ...Data3, ...Data4], []);
+  const allProducts = useMemo(() => [...Data, ...Data2, ...Data3, ...Data4],[]);
 
   const { cart } = useContext(CartContext)
   const [isOpen, setIsOpen] = useState(false);
@@ -21,19 +21,19 @@ const Heading = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
 
   const handleSearch = (e) => {
-    const value = e.target.value;
-    setSearchQuery(value);
+  const value = e.target.value;
+  setSearchQuery(value);
 
-    if (value.trim() === "") {
-      setFilteredProducts([]); 
-    } else {
-      const searchData = allProducts.filter((item) =>
-                
-        (item.title  || "").toLowerCase().includes(value.toLowerCase())
-      );
-      setFilteredProducts(searchData);
-    }
-  };
+  if (value.trim() === "") {
+    setFilteredProducts([]); 
+  } else {
+   
+    const searchData = allProducts.filter((item) =>
+      item.title.toLowerCase().includes(value.toLowerCase())
+    );
+    setFilteredProducts(searchData);
+  }
+};
 
   return (
     <>
@@ -41,7 +41,7 @@ const Heading = () => {
       <div className="bg-[#F5F5F3] py-8 px-4">
         <div className="max-w-[1440px] mx-auto flex justify-between items-center">
           
-          {/* Category Dropdown */}
+        
           <div className="relative">
             <div 
               className="flex items-center px-2 py-2 bg-white gap-1 cursor-pointer" 

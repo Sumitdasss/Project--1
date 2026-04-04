@@ -2,7 +2,7 @@
   export  const Data2  = [
 
        {
-      id: 1,
+      id: 31,
       title: "Clock",
       description:
         "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
@@ -58,7 +58,7 @@
         "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp",
        } ,
        {
-        id: 2,
+        id: 32,
       title: "Digital Watch",
       description:
         "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
@@ -114,7 +114,7 @@
         "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp",
        } ,
        {
-        id: 3,
+        id: 33,
       title: "Basket",
       description:
         "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
@@ -170,7 +170,7 @@
         "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp",
        } ,
        {
-       id: 4,
+       id: 34,
       title: "Toy",
       description:
         "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",

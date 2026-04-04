@@ -13,7 +13,7 @@ const ProductDetails = () => {
  const { dispatch } = useContext(CartContext);
 
   const allProducts = useMemo(() => [...Data2, ...Data, ...Data3, ...Data4], []);
-  const product = allProducts.find((item) => item.id == id);
+  const product = allProducts.find((item) => Number(item.id) === Number(id));
 
   if (!product) return <div className="text-center py-20">Product not found!</div>;
 
@@ -33,7 +33,7 @@ const ProductDetails = () => {
     
         <div className="w-full md:w-1/2 bg-[#F5F5F3] p-10 flex justify-center">
           <img 
-            src={product.images ? product.images[0] : product.img} 
+            src={product.images[0]} 
             alt={product.title} 
             className="max-h-[500px] object-contain" 
           />
@@ -42,7 +42,7 @@ const ProductDetails = () => {
         <div className="w-full md:w-1/2 flex flex-col gap-5">
           <h1 className="text-4xl font-bold">{product.title }</h1>
           <p className="text-2xl font-bold text-[#262626]">${product.price}</p>
-          <p className="text-[#767676]">{product.description || "Product description goes here..."}</p>
+          <p className="text-[#767676]">{product.description}</p>
           
           <div className="flex flex-col gap-2">
             <p className="font-bold">Color: <span className="font-normal">{product.color}</span></p>
