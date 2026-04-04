@@ -54,8 +54,8 @@ const Heading = () => {
             <div className={`absolute left-0 z-40 top-12 mt-2 w-[200px] bg-[#262626] overflow-hidden shadow-lg transition-all duration-500 ${isOpen2 ? "max-h-[320px]" : "max-h-0"}`}>
               <ul className="flex flex-col text-white/70">
                 <Link to="/accessories" className="px-6 py-4 border-b border-[#D8D8D8]/30 hover:text-white text-sm">Accessories</Link>
-                <Link to="/furniture" className="px-6 py-4 border-b border-[#D8D8D8]/30 hover:text-white text-sm">Furniture</Link>
-                <Link to="/electronics" className="px-6 py-4 border-b border-[#D8D8D8]/30 hover:text-white text-sm">Electronics</Link>
+                <Link to="/banner" className="px-6 py-4 border-b border-[#D8D8D8]/30 hover:text-white text-sm">Furniture</Link>
+                <Link to="/" className="px-6 py-4 border-b border-[#D8D8D8]/30 hover:text-white text-sm">Electronics</Link>
               </ul>
             </div>
           </div>
