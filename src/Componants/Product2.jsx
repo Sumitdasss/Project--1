@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from "react";
-import Data from "../../Data.json"
+import{ Data2 } from "../Data/Datafour"
 import Producetwo from "./Producetwo";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -52,7 +52,7 @@ beforeChange: (prev, next) => {
   ),
 
   }; 
-     const [Product3 ]=useState(Data.Product3);
+     const [Product3 ]=useState(Data2);
   return (
      <div className="max-w-[1440px] mx-auto mt-[50px]">
         <p className="text-[40px] font-bold text-[#262626] pb-7">Special Offers</p>

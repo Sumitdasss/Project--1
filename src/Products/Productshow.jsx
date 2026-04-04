@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { Data as Data2  } from "../Data/Data"; 
+import { useMemo, useState } from "react";
+import{Data2} from "../Data/Datafour"
+import{ Data } from "../Data/Data";
 import { Data3 } from "../Data/Datatwo";
 import { Data4 } from "../Data/Datathree";
 import Productitem from "./Productitem";
@@ -7,11 +8,15 @@ import Recomanded from "../Rocommanded/Recomanded";
 import Catigori from "../Slidebar/Catygori/Catigori";
 import Price from "../Slidebar/Price/Price";
 import Color from "../Slidebar/Color/Color";
-const allProducts = [...Data2, ...Data3,...Data4];
+
 import { IoGrid } from "react-icons/io5";
 import { FaCaretUp, FaThList } from "react-icons/fa";
 
 const Productshow = () => {
+
+  const allProducts = useMemo(() => {
+    return [...Data3, ...Data4, ...Data,...Data2];
+  }, []); 
   const [products] = useState(allProducts); 
   const [filteredProducts, setFilteredProducts] = useState(allProducts); 
   const [currentPage, setCurrentPage] = useState(1); 

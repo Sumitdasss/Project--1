@@ -19,7 +19,7 @@ const Color = ({ item, onFilter }) => {
         <FaCaretUp className={`transition-transform duration-300 ${!isOpen ? "rotate-180" : ""}`} />
       </div>
 
-      <div className={`overflow-hidden transition-all duration-500 ${isOpen ? "max-h-[500px]" : "max-h-0"}`}>
+      <div className={`overflow-hidden transition-all duration-500 ${isOpen ? "max-h-[700px]" : "max-h-0"}`}>
         <ul className="flex flex-col">
           {colors.map((colorName, index) => (
             <li 

@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import Data from "../../Data.json"
+import {Data2} from "../Data/Datafour";
 import Producetwo from "./Producetwo";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -65,7 +65,7 @@ beforeChange: (prev, next) => {
   ),
 
   }; 
-     const [Product ]=useState(Data.Product);
+     const [Product ]=useState(Data2);
   return (
     <>
    

@@ -1,11 +1,11 @@
- export const Data = [
+export const Data = [
    
     {
       id: 1,
       title: "Essence Mascara Lash Princess",
       description:
         "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
-      category: "beauty",
+      category: "furniture",
       price: 9.99,
       discountPercentage: 10.48,
       rating: 2.56,
@@ -181,7 +181,7 @@
       tags: ["beauty", "lipstick"],
       brand: "Chic Cosmetics",
       sku: "BEA-CHI-LIP-004",
-      color:"Red",
+      color:"Black",
       weight: 1,
       dimensions: { width: 18.11, height: 28.38, depth: 22.17 },
       warrantyInformation: "3 year warranty",
@@ -980,7 +980,7 @@
       discountPercentage: 9.58,
       rating: 3.13,
       stock: 46,
-      Color:"Purpul",
+      color:"violet",
       tags: ["pet supplies", "cat food"],
       sku: "GRO-BRD-FOO-018",
       weight: 10,
