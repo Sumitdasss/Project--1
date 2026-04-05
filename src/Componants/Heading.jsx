@@ -53,9 +53,12 @@ const Heading = () => {
 
             <div className={`absolute left-0 z-40 top-12 mt-2 w-[200px] bg-[#262626] overflow-hidden shadow-lg transition-all duration-500 ${isOpen2 ? "max-h-[320px]" : "max-h-0"}`}>
               <ul className="flex flex-col text-white/70">
-                <Link to="/accessories" className="px-6 py-4 border-b border-[#D8D8D8]/30 hover:text-white text-sm">Accessories</Link>
-                <Link to="/banner" className="px-6 py-4 border-b border-[#D8D8D8]/30 hover:text-white text-sm">Furniture</Link>
-                <Link to="/" className="px-6 py-4 border-b border-[#D8D8D8]/30 hover:text-white text-sm">Electronics</Link>
+                <Link to="/accessories" className="px-6 py-4 border-b border-[#D8D8D8]/30 focus:outline-none focus:text-white focus:pl-8 duration-500  text-sm">Accessories</Link>
+                <Link to="/banner" className="px-6 py-4 border-b border-[#D8D8D8]/30 focus:outline-none focus:text-white focus:pl-8  duration-500  text-sm">Furniture</Link>
+                <Link to="/" className="px-6 py-4 border-b border-[#D8D8D8]/30 focus:outline-none focus:text-white focus:pl-8  duration-500  text-sm">Electronics</Link>
+                <Link  className="px-6 py-4 border-b border-[#D8D8D8]/30 focus:outline-none focus:text-white focus:pl-8  duration-500  text-sm">Clothes</Link>
+                <Link  className="px-6 py-4 border-b border-[#D8D8D8]/30 focus:outline-none focus:text-white focus:pl-8  duration-500  text-sm">Bags</Link>
+                <Link  className="px-6 py-4 border-b border-[#D8D8D8]/30 focus:outline-none focus:text-white focus:pl-8 duration-500 text-sm">Home appliances</Link>
               </ul>
             </div>
           </div>
@@ -107,6 +110,7 @@ const Heading = () => {
               <div className={`absolute right-0 z-40 top-10 mt-2 w-[150px] bg-[#262626] rounded-md overflow-hidden shadow-lg transition-all duration-500 ${isOpen ? "max-h-[270px]" : "max-h-0"}`}>
                 <ul className="flex flex-col text-white/70">
                   <Link to="/profile" className="px-6 py-4 border-b border-[#D8D8D8]/30 hover:text-white text-sm">Profile</Link>
+                  <Link to="/signup" className="px-6 py-4 border-b border-[#D8D8D8]/30 hover:text-white text-sm">Sign Up</Link>
                   <Link to="/login" className="px-6 py-4 border-b border-[#D8D8D8]/30 hover:text-white text-sm">Login</Link>
                 </ul>
               </div>
