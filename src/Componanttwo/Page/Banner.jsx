@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import  img1 from'/src/assets/couch 1.png'
 import Button from '../../Componants/Button'
 import Slider from 'react-slick';
@@ -14,6 +14,7 @@ import Producttwo from './Producttwo';
 import { Link } from 'react-router-dom';
 import Bannrethree from './Bannrethree';
 import { Productthree } from './Productthree';
+import RetroLoader from '../../Componants/Loading';
 
 
 const SlickSlider = Slider.default ? Slider.default : Slider;
@@ -66,6 +67,22 @@ appendDots: (dots) => (
   ),
 
 };
+
+ const [isLoading, setIsLoading] = useState(true);
+useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2122);
+    return () => clearTimeout(timer);
+  }, []);
+
+
+
+if (isLoading) {
+    return <RetroLoader />; 
+  }
+
+
 
   return (
     <div className="">

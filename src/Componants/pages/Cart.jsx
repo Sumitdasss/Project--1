@@ -1,12 +1,27 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import CartProduct from "../CartProduct";
 import { totalItem, totaPrice } from "../../Feturch/CartReducer";
 import { CartContext } from "../../Feturch/CartProvider";
 import { Link } from "react-router-dom";
+import RetroLoader from "../Loading";
 
 const Cart = () => {
   const { cart } = useContext(CartContext);
+   const [isLoading, setIsLoading] = useState(true);
+useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2122);
+    return () => clearTimeout(timer);
+  }, []);
+
+
+
+if (isLoading) {
+    return <RetroLoader />; 
+  }
+
   return (
     <div id="cart-part">
       <div className="max-w-[1440px] mx-auto">

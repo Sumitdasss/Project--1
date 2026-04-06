@@ -1,4 +1,4 @@
-import React, { useContext, useMemo } from 'react';
+import React, { useContext, useEffect, useMemo, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { CartContext } from '../Feturch/CartProvider'; 
 import { Data2 } from '../Data/Datafour';
@@ -6,6 +6,7 @@ import { Data } from '../Data/Data';
 import { Data3 } from '../Data/Datatwo';
 import { Data4 } from '../Data/Datathree';
 import { FaShoppingCart } from 'react-icons/fa';
+import RetroLoader from './Loading';
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -26,6 +27,23 @@ const ProductDetails = () => {
    
     console.log("Product added to cart");
   };
+
+ // eslint-disable-next-line react-hooks/rules-of-hooks
+ const [isLoading, setIsLoading] = useState(true);
+// eslint-disable-next-line react-hooks/rules-of-hooks
+useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2122);
+    return () => clearTimeout(timer);
+  }, []);
+
+
+
+if (isLoading) {
+    return <RetroLoader />; 
+  }
+
 
   return (
     <div className="max-w-[1440px] mx-auto py-20 px-4">

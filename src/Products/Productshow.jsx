@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import{Data2} from "../Data/Datafour"
 import{ Data } from "../Data/Data";
 import { Data3 } from "../Data/Datatwo";
@@ -11,6 +11,7 @@ import Color from "../Slidebar/Color/Color";
 
 import { IoGrid } from "react-icons/io5";
 import { FaCaretUp, FaThList } from "react-icons/fa";
+import RetroLoader from "../Componants/Loading";
 
 const Productshow = () => {
 
@@ -60,6 +61,23 @@ const Productshow = () => {
 
   const pages = [];
   for (let i = 1; i <= totalPages; i++) { pages.push(i); }
+
+
+ const [isLoading, setIsLoading] = useState(true);
+useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2122);
+    return () => clearTimeout(timer);
+  }, []);
+
+
+
+if (isLoading) {
+    return <RetroLoader />; 
+  }
+
+
 
   return (
     <div className="max-w-[1440px] mx-auto mt-[50px] px-4 mb-20">

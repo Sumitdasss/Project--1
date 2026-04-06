@@ -1,13 +1,70 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaAngleRight, FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import Button from './Button';
+import  locationsData  from '../Data/index.json';
+import RetroLoader from './Loading';
 
 const Singup = () => {
      const [showPassword, setShowPassword] = useState(false);
      const [showPassword2, setShowPassword2] = useState(false);
+     const [isLoading, setIsLoading] = useState(true);
+    const [divisions] = useState(locationsData);
+  const [selectedDiv, setSelectedDiv] = useState('');
+  const [selectedDist, setSelectedDist] = useState('');
+  const [selectedUpazila, setSelectedUpazila] = useState('');
+  const [selectedUnion, setSelectedUnion] = useState('');
+
+  const [districtsList, setDistrictsList] = useState([]);
+  const [upazilasList, setUpazilasList] = useState([]);
+  const [unionsList, setUnionsList] = useState([]);
+
+ 
+
+
+  const handleDivisionChange = (e) => {
+    const divId = e.target.value;
+    setSelectedDiv(divId);
     
+  
+    setSelectedDist('');
+    setSelectedUpazila('');
+    setSelectedUnion('');
+    setUpazilasList([]);
+    setUnionsList([]);
+
+  
+    const divObj = divisions.find(d => d.id === divId);
+    setDistrictsList(divObj ? divObj.districts : []);
+  };
+
+
+  const handleDistrictChange = (e) => {
+    const distId = e.target.value;
+    setSelectedDist(distId);
     
+    setSelectedUpazila('');
+    setSelectedUnion('');
+    setUnionsList([]);
+
+   
+    const distObj = districtsList.find(d => d.id === distId);
+    setUpazilasList(distObj ? distObj.upazilas : []);
+  };
+
+
+  const handleUpazilaChange = (e) => {
+    const upazilaId = e.target.value;
+    setSelectedUpazila(upazilaId);
+    setSelectedUnion('');
+
+   
+    const upaObj = upazilasList.find(u => u.id === upazilaId);
+    setUnionsList(upaObj ? upaObj.unions : []);
+  };
+   
+
+
+
       
       const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
@@ -15,6 +72,22 @@ const Singup = () => {
       const togglePasswordVisibility2 = () => {
         setShowPassword2(!showPassword2);
       };
+
+useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2122);
+    return () => clearTimeout(timer);
+  }, []);
+
+
+
+if (isLoading) {
+    return <RetroLoader />; 
+  }
+
+
+
   return (
     <div className="max-w-[1440px] mx-auto ">
 <div className="mt-[136px] mb-[136px]">
@@ -64,33 +137,48 @@ const Singup = () => {
   
     </div>
     <div className="flex mt-[30px]  gap-x-15">
-        <div className="">
-            <p className='text-[#262626] font-bold text-[17px]'>City</p>
-            <input type="text" placeholder='Your city' className='w-[508px] text-[20px]  h-[50px] text-[#767676] font-medium border-b-2 border-[#F0F0F0] focus:outline-none' />
+       <div className="">
+            <p className='text-[#262626] font-bold text-[17px]'>Divisions</p>
+           <select onChange={handleDivisionChange} value={selectedDiv} name="" id="" className='w-[508px] text-[20px]  h-[50px] text-[#767676] font-medium border-b-2 border-[#F0F0F0] focus:outline-none'>
+          <option value="">Select Division</option>
+              {divisions.map((div) => (
+                <option key={div.id} value={div.id}>{div.bn_name}</option>
+              ))}
+           </select>
         </div>
-        <div className="">
-            <p className='text-[#262626] font-bold text-[17px]'>Post Code</p>
-            <input type="text" placeholder='Your Post Code' className='w-[508px] text-[20px]  h-[50px] text-[#767676] font-medium border-b-2 border-[#F0F0F0] focus:outline-none' />
+       <div className="">
+            <p className='text-[#262626] font-bold text-[17px]'>Districts</p>
+           <select onChange={handleDistrictChange} 
+              value={selectedDist} 
+              disabled={!selectedDiv} name="" id="" className='w-[508px] text-[20px]  h-[50px] text-[#767676] font-medium border-b-2 border-[#F0F0F0] focus:outline-none'>
+           <option value="">Select District</option>
+              {districtsList.map((dist) => (
+                <option key={dist.id} value={dist.id}>{dist.bn_name}</option>
+              ))}
+           </select>
         </div>
   
     </div>
     <div className="flex mt-[30px] pb-[70px] border-b-2 border-[#F0F0F0] gap-x-15">
         <div className="">
-            <p className='text-[#262626] font-bold text-[17px]'>Country</p>
-           <select name="" id="" className='w-[508px] text-[20px]  h-[50px] text-[#767676] font-medium border-b-2 border-[#F0F0F0] focus:outline-none'>
-            <option value="">Select your country</option>
-            <option value="">Country 1</option>
-            <option value="">Country 2</option>
-            <option value="">Country 3</option>
+            <p className='text-[#262626] font-bold text-[17px]'>Upazila</p>
+           <select onChange={handleUpazilaChange} 
+              value={selectedUpazila} 
+              disabled={!selectedDist} name="" id="" className='w-[508px] text-[20px]  h-[50px] text-[#767676] font-medium border-b-2 border-[#F0F0F0] focus:outline-none'>
+         <option value="">Select Upazila</option>
+              {upazilasList.map((upa) => (
+                <option key={upa.id} value={upa.id}>{upa.bn_name}</option>
+              ))}
            </select>
         </div>
         <div className="">
-            <p className='text-[#262626] font-bold text-[17px]'>Region/State</p>
-             <select name="" id="" className='w-[508px] text-[20px]  h-[50px] text-[#767676] font-medium border-b-2 border-[#F0F0F0] focus:outline-none'>
-            <option value="">Select your region/state</option>
-            <option value="">Region/State 1</option>
-            <option value="">Region/State 2</option>
-            <option value="">Region/State 3</option>
+            <p className='text-[#262626] font-bold text-[17px]'>Unions</p>
+             <select onChange={(e) => setSelectedUnion(e.target.value)} disabled={!selectedUpazila} value={selectedUnion}  name="" id="" className='w-[508px] text-[20px]  h-[50px] text-[#767676] font-medium border-b-2 border-[#F0F0F0] focus:outline-none'>
+            <option value="">Select Union</option>
+              {unionsList.map((union) => (
+                <option key={union.id} value={union.id}>{union.bn_name}</option>
+              ))}
+
            </select>
         </div>
   
@@ -160,7 +248,7 @@ const Singup = () => {
               type="radio" 
               name="newsletter" 
               value="yes"
-              checked={'yes'}
+              defaultChecked={true}
              
               className="w-4 h-4 border-[#767676] focus:ring-[#767676] accent-[#767676]"
             />
@@ -173,7 +261,7 @@ const Singup = () => {
               type="radio" 
               name="newsletter" 
               value="no"
-              checked={'no'}
+              defaultChecked={true}
               
               className="w-4 h-4 border-[#767676] focus:ring-[#767676] accent-[#767676]"
             />

@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import {  useState } from "react";
 import {Data2} from "../Data/Datafour";
 import Producetwo from "./Producetwo";
 import "slick-carousel/slick/slick.css";
@@ -11,6 +11,7 @@ import Product2 from "./Product2";
 import Banner from "./Banner";
 import Bannertwo from "./Bannertwo";
 import Bannerthree from "./Bannerthree";
+import RetroLoader from "./Loading";
 
 
 
@@ -21,6 +22,7 @@ const Produtc = () => {
 
 
    const [dotActive, setDotActive] = useState(0);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -66,6 +68,13 @@ beforeChange: (prev, next) => {
 
   }; 
      const [Product ]=useState(Data2);
+
+
+
+
+
+
+
   return (
     <>
    

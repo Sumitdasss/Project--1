@@ -1,6 +1,7 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { FaAngleRight, FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import RetroLoader from './Loading';
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -51,6 +52,23 @@ const Login = () => {
       setBtnPos({ left: '0', top: '0', position: 'relative' });
     }
   };
+
+
+ const [isLoading, setIsLoading] = useState(true);
+useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2122);
+    return () => clearTimeout(timer);
+  }, []);
+
+
+
+if (isLoading) {
+    return <RetroLoader />; 
+  }
+
+
 
   return (
     <div className="max-w-[1440px] mx-auto">
