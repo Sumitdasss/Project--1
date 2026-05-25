@@ -12,6 +12,8 @@ import Banner from "./Banner";
 import Bannertwo from "./Bannertwo";
 import Bannerthree from "./Bannerthree";
 import RetroLoader from "./Loading";
+import Chat from "./Chatbox";
+import AdminChat from "./Adminchart";
 
 
 
@@ -80,6 +82,8 @@ beforeChange: (prev, next) => {
    
     
     <Banner/>
+    <Chat/>
+    <AdminChat/>
     <Bannertwo/>
     <div className="max-w-[1440px] mx-auto mt-[50px]">
       <p className="text-[40px] font-bold text-[#262626] pb-7">New Arrivals</p>

@@ -26,7 +26,8 @@ const CartReducer = (state, action) => {
       }
       
       
-      return [...state, { ...itemToAdd, quantity: 1 }]; }
+      return [...state, { ...itemToAdd, quantity: 1 }];
+     }
 
     case "Remove":
       return state.filter((p) => p.id !== action.id);
